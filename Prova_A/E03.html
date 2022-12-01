@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<script>
+    //Problema: Grêmio Estudantil
+    /*
+    Está ocorrendo, em uma instituição de ensino, a eleição do grêmio estudantil. Existem sete turmas na instituição e quem votará serão os dois representantes de cada turma.
+    Pergunte, para cada representante, qual a chapa que deseja confiar o voto (Chapa 1 ou Chapa 2).
+    Apresente, ao fim do programa, qual foi a chapa ganhadora e a porcentagem de votos que a chapa recebeu.
+    */
+
+    //Entrada
+    let chapa1 = 0
+    let chapa2 = 0
+
+
+    //Processamento
+    for(controle = 1; controle <= 14; controle++ ){
+        let representante = prompt("Informe qual será seu voto chapa 1(1) chapa2(2).)");
+        if (representante === "2") {chapa2++
+        }
+        else if (representante === "1") {chapa1++
+        }
+    }
+    let percentual1 = (chapa1/14)*100
+    
+    let percentual2 = (chapa2/14)*100
+
+    if (percentual1 > percentual2) {
+        document.write(`A chapa 1 ganhou com ${percentual1.toFixed(1)}% dos votos`)
+        
+    }
+    else{document.write(`A chapa 2 ganhou com ${percentual2.toFixed(1)}% dos votos`)}
+
+
+    //Saída
+
+</script>

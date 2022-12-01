@@ -1,0 +1,29 @@
+<meta charset="UTF-8" />
+<script>
+  //Problema: Diário de Classe
+  /*
+    Para finalizar o ano letivo, o professor terá que informar ao sistema a nota do trimestre de cada um dos seus 10 alunos.
+    Identifique e apresente quantos alunos ficaram com nota abaixo de 6 e quantos conseguiram nota acima de 6. Também apresente a média das notas dos alunos que conseguiram nota maior ou igual a 6.
+    */
+
+  //Entrada
+  let notaAbaixoDe6 = 0;
+  let notaAcimaDe6 = 0;
+  let somaAcima6 = 0;
+
+  //Processamento
+  for (let controle = 0; controle < 10; controle++) {
+    let notasDosAlunos = Number(prompt("Informe a nota desse aluno."));
+
+    if (notasDosAlunos >= 6) {
+      notaAcimaDe6++;
+      somaAcima6 = somaAcima6 + notasDosAlunos;
+    } else if (notasDosAlunos < 6) {
+      notaAbaixoDe6++;
+    }
+  }
+  let mediaDasNotas = somaAcima6 / notaAcimaDe6;
+
+  //Saída
+  document.write(`Alunos com nota abaixo de 6: ${notaAbaixoDe6} <br> Alunos com nota acima de 6:${notaAcimaDe6} <br> Média das notas: ${mediaDasNotas}`)
+</script>
